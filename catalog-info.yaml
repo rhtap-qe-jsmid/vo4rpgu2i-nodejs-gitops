@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vo4rpgu2i-nodejs-gitops
+  description: This is GitOps manifest for vo4rpgu2i-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: vo4rpgu2i-nodejs
+    janus-idp.io/tekton: vo4rpgu2i-nodejs
+    backstage.io/kubernetes-id: vo4rpgu2i-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:vo4rpgu2i-nodejs
